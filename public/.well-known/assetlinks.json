@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.unisell.market",
+      "sha256_cert_fingerprints": [
+        "26:6E:81:96:59:77:72:3B:17:19:04:00:90:D0:BB:B7:D6:B2:08:1B:5C:B9:91:F6:D0:C1:A1:7C:27:AA:04:30"
+      ]
+    }
+  }
+]

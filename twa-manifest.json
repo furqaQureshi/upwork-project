@@ -1,0 +1,40 @@
+{
+  "packageId": "com.example.demo_marketplace",
+  "host": "localhost:8000",
+  "name": "Demo Marketplace",
+  "launcherName": "Demo Marketplace",
+  "display": "standalone",
+  "orientation": "any",
+  "themeColor": "#f97316",
+  "navigationColor": "#000000",
+  "backgroundColor": "#ffffff",
+  "startUrl": "/",
+  "iconUrl": "http://localhost:8000/media-files/twa/icons/demo-icon.png",
+  "maskableIconUrl": "http://localhost:8000/media-files/twa/icons/demo-maskable-icon.png",
+  "monochromeIconUrl": null,
+  "shortcuts": [],
+  "signingKey": {
+    "path": "./demo-release.p12",
+    "alias": "demo_release"
+  },
+  "splashScreenFadeOutDuration": 300,
+  "enableNotifications": true,
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fingerprints": [
+    {
+      "name": "demo",
+      "value": "AA:BB:CC:DD:EE:FF:11:22:33:44:55:66:77:88:99:00:AA:BB:CC:DD:EE:FF:11:22"
+    }
+  ],
+  "useBrowserOnChromeOS": true,
+  "minSdkVersion": 34,
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "generatedAppVersionCode": 1
+}

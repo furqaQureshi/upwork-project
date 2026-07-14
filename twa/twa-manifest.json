@@ -1,0 +1,15 @@
+{
+  "packageId": "com.unisell.market",
+  "host": "your-production-domain.com",
+  "name": "Unsell Marketplace",
+  "launcherName": "Unsell",
+  "display": "standalone",
+  "themeColor": "#ea580c",
+  "navigationColor": "#10242f",
+  "backgroundColor": "#f8f5ef",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://your-production-domain.com/branding/unsell-icon-512.png",
+  "maskableIconUrl": "https://your-production-domain.com/branding/unsell-maskable-512.png",
+  "fallbackType": "customtabs"
+}
