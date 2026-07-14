@@ -35,9 +35,9 @@ return new class extends Migration
             $table->json('callback_payload')->nullable();
             $table->timestamps();
 
-            $table->index(['user_id', 'status']);
-            $table->index(['subscription_package_id', 'status']);
-            $table->index(['package_expires_at', 'status']);
+            $table->index(['user_id', 'status'], 'spp_user_status_idx');
+            $table->index(['subscription_package_id', 'status'], 'spp_package_status_idx');
+            $table->index(['package_expires_at', 'status'], 'spp_expires_status_idx');
         });
     }
 

@@ -13,15 +13,19 @@ return new class extends Migration
     {
         Schema::create('subscription_package_usages', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('subscription_package_purchase_id')->constrained()->cascadeOnDelete();
+            $table->unsignedBigInteger('subscription_package_purchase_id');
             $table->foreignId('listing_id')->nullable()->constrained()->nullOnDelete();
             $table->enum('usage_type', ['listing_create', 'featured_boost', 'ai_listing_draft', 'ai_price_recommendation', 'ai_compass_chat', 'ai_cv_match'])->index();
             $table->timestamp('consumed_at')->nullable();
             $table->json('meta')->nullable();
             $table->timestamps();
 
-            $table->index(['subscription_package_purchase_id', 'usage_type']);
-            $table->index(['listing_id', 'usage_type']);
+            $table->foreign('subscription_package_purchase_id', 'spu_purchase_fk')
+                ->references('id')
+                ->on('subscription_package_purchases')
+                ->cascadeOnDelete();
+            $table->index(['subscription_package_purchase_id', 'usage_type'], 'spu_purchase_usage_idx');
+            $table->index(['listing_id', 'usage_type'], 'spu_listing_usage_idx');
         });
     }
 

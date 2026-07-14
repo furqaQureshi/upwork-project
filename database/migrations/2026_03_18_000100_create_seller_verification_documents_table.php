@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('verification_note')->nullable();
             $table->timestamps();
 
-            $table->index(['seller_verification_id', 'document_type']);
+            $table->index(['seller_verification_id', 'document_type'], 'sv_docs_verification_type_idx');
             $table->index(['verification_status']);
         });
     }
