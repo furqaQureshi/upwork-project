@@ -2103,16 +2103,16 @@
                     <x-input-error :messages="$errors->get('codecanyon_personal_token')" class="mt-2" />
                 </div>
 
-                @if(AppSetting::getValue('license_verified', false))
+                @if(\App\Models\AppSetting::getValue('license_verified', false))
                     <div class="mt-5 rounded-xl border border-green-200 bg-green-50 p-4">
                         <div class="flex items-center gap-2">
                             <svg class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                             <span class="text-sm font-semibold text-green-800">License Verified</span>
                         </div>
                         <p class="mt-1 text-xs text-green-700">
-                            Last verified: {{ AppSetting::getValue('license_last_verified', 'Never') }}
-                            @if(AppSetting::getValue('codecanyon_buyer_username'))
-                                | Buyer: {{ AppSetting::getValue('codecanyon_buyer_username') }}
+                            Last verified: {{ \App\Models\AppSetting::getValue('license_last_verified', 'Never') }}
+                            @if(\App\Models\AppSetting::getValue('codecanyon_buyer_username'))
+                                | Buyer: {{ \App\Models\AppSetting::getValue('codecanyon_buyer_username') }}
                             @endif
                         </p>
                     </div>
