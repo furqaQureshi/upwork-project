@@ -11,10 +11,6 @@ class AppSetting extends Model
     protected $table = 'app_settings';
     protected $fillable = ['key', 'value', 'type', 'group', 'label', 'description'];
     
-    protected $casts = [
-        'value' => 'json',
-    ];
-    
     public static function get(string $key, $default = null)
     {
         return self::getValue($key, $default);
